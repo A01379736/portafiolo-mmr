@@ -319,6 +319,75 @@
         color: #6b4c3b;
         opacity: 0.85;
       }
+
+      .cv-download-btn {
+        background-color: var(--color-cafe);
+        color: var(--color-blanco);
+        padding: 12px 20px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1rem;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
+      }
+      .cv-download-btn:hover {
+        background-color: var(--color-rosa);
+        color: var(--color-cafe);
+      }
+
+      .cv-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+        margin-top: 20px;
+      }
+
+      .cv-box {
+        background-color: var(--color-blanco);
+        border-radius: 12px;
+        padding: 20px 24px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+      }
+      .cv-box:hover {
+        transform: translateY(-4px);
+      }
+
+      .cv-box h3 {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+        color: var(--color-cafe);
+      }
+
+      .cv-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .cv-table th {
+        text-align: left;
+        color: #6b4c3b;
+        font-weight: 600;
+        width: 30%;
+        padding: 6px 0;
+      }
+      .cv-table td {
+        color: #444;
+        padding: 6px 0;
+      }
+
+      .cv-list {
+        padding-left: 16px;
+        margin: 0;
+      }
+      .cv-list li {
+        margin-bottom: 10px;
+        line-height: 1.5;
+      }
+      .inst {
+        font-size: 0.9rem;
+        color: #888;
+      }
     </style>
   </head>
   <body>
@@ -330,7 +399,7 @@
     <nav>
       <button onclick="showSection('sobre-mi')">Sobre mí</button>
       <button onclick="showSection('portafolio')">Portafolio</button>
-      <button onclick="showSection('habilidades')">Habilidades</button>
+      <button onclick="showSection('cv')">CV</button>
       <button onclick="showSection('contacto')">Contacto</button>
     </nav>
 
@@ -370,8 +439,7 @@
             <span class="emoji">👑</span>
             <p class="title">Influencer</p>
             <p class="desc">
-              Impactando positivamente a través del deporte y las
-              redes sociales
+              Impactando positivamente a través del deporte y las redes sociales
             </p>
           </div>
           <div class="card">
@@ -405,8 +473,8 @@
             <span class="emoji">🌱</span>
             <p class="title">Activista ambiental</p>
             <p class="desc">
-              Participante de <strong>Amigos x el Bosque</strong>, promoviendo la
-              educación sostenible y protección del ecosistema del Bosque de
+              Participante de <strong>Amigos x el Bosque</strong>, promoviendo
+              la educación sostenible y protección del ecosistema del Bosque de
               Agua.
             </p>
           </div>
@@ -644,66 +712,94 @@
       </div>
     </section>
 
-    <section id="habilidades">
-      <h2>Habilidades técnicas</h2>
+    <section id="cv" style="padding: 40px 20px">
+      <h2
+        style="
+          text-align: center;
+          font-size: 2rem;
+          color: var(--color-cafe);
+          margin-bottom: 20px;
+        "
+      >
+        📄 Currículum Profesional
+      </h2>
 
-      <div class="skills-grid">
-        <!-- Lenguajes -->
-        <div class="skill-card">
-          <h3><i class="fas fa-code"></i> Lenguajes de Programación</h3>
-          <ul>
-            <li>Python</li>
-            <li>JavaScript</li>
-            <li>C#</li>
-            <li>Kotlin</li>
-            <li>SQL</li>
-            <li>HTML / CSS</li>
+      <div style="text-align: center; margin-bottom: 30px">
+        <a href="assets/CV - Melissa Mireles 2025.pdf" download class="cv-download-btn">
+          <i class="fas fa-download"></i> Descargar CV (PDF)
+        </a>
+      </div>
+
+      <div class="cv-grid">
+        <!-- Habilidades -->
+        <div class="cv-box">
+          <h3><i class="fas fa-tools"></i> Habilidades Técnicas</h3>
+          <table class="cv-table">
+            <tr>
+              <th>Lenguajes</th>
+              <td>Python, Kotlin, JavaScript, C#, SQL, HTML/CSS</td>
+            </tr>
+            <tr>
+              <th>Web</th>
+              <td>React (básico), Node.js, PHP, Chart.js</td>
+            </tr>
+            <tr>
+              <th>Móvil</th>
+              <td>Android Studio, Jetpack Compose, Retrofit</td>
+            </tr>
+            <tr>
+              <th>IoT / Datos</th>
+              <td>Arduino IDE, MQTT, Node-RED, MySQL</td>
+            </tr>
+            <tr>
+              <th>Herramientas</th>
+              <td>Git, Figma, Power BI, Trello, Lucidchart</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Experiencia -->
+        <div class="cv-box">
+          <h3><i class="fas fa-briefcase"></i> Experiencia Profesional</h3>
+          <ul class="cv-list">
+            <li>
+              <strong>P&G (2025 – Actualidad):</strong> Data Analytics Intern
+            </li>
+            <li>
+              <strong>CHS (2023 – 2024):</strong> Analista de datos e
+              inteligencia de negocios
+            </li>
+            <li>
+              <strong>Hospital Satélite (2024):</strong> Atracción de talento y
+              RR.HH.
+            </li>
+            <li><strong>M3G Consultores (2022):</strong> Desarrolladora Web</li>
           </ul>
         </div>
 
-        <!-- Desarrollo móvil -->
-        <div class="skill-card">
-          <h3><i class="fas fa-mobile-alt"></i> Desarrollo Móvil</h3>
-          <ul>
-            <li>Android Studio</li>
-            <li>Jetpack Compose</li>
-            <li>Retrofit</li>
-            <li>Kotlin</li>
+        <!-- Certificaciones -->
+        <div class="cv-box">
+          <h3><i class="fas fa-award"></i> Certificaciones</h3>
+          <ul class="cv-list">
+            <li>
+              <strong>Excel Power Tools for Data Analysis</strong><br /><span
+                class="inst"
+                >Macquarie University – 2025</span
+              >
+            </li>
+            <li>
+              <strong>Introducción a la Programación con Python</strong
+              ><br /><span class="inst">Universidad Austral – 2024</span>
+            </li>
           </ul>
         </div>
 
-        <!-- Desarrollo web -->
-        <div class="skill-card">
-          <h3><i class="fas fa-globe"></i> Desarrollo Web</h3>
-          <ul>
-            <li>React (básico)</li>
-            <li>Node.js</li>
-            <li>PHP</li>
-            <li>Chart.js</li>
-          </ul>
-        </div>
-
-        <!-- IoT y Datos -->
-        <div class="skill-card">
-          <h3><i class="fas fa-microchip"></i> IoT y Bases de Datos</h3>
-          <ul>
-            <li>Arduino IDE</li>
-            <li>Node-RED</li>
-            <li>MQTT</li>
-            <li>MySQL</li>
-            <li>phpMyAdmin</li>
-          </ul>
-        </div>
-
-        <!-- Herramientas -->
-        <div class="skill-card">
-          <h3><i class="fas fa-tools"></i> Herramientas y Gestión</h3>
-          <ul>
-            <li>Git y GitHub</li>
-            <li>Figma</li>
-            <li>Trello</li>
-            <li>Lucidchart / Visual Paradigm</li>
-            <li>Power BI</li>
+        <!-- Idiomas -->
+        <div class="cv-box">
+          <h3><i class="fas fa-language"></i> Idiomas</h3>
+          <ul class="cv-list">
+            <li><strong>Español:</strong> Nativo</li>
+            <li><strong>Inglés:</strong> Competencia básica profesional</li>
           </ul>
         </div>
       </div>
