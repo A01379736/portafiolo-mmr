@@ -1,107 +1,639 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Melissa Mireles | Portafolio Etapa de Enfoque</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 20px;
-      background-color: #f7f7f7;
-      color: #333;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Melissa Mireles | Portafolio ITC</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-    header {
-      background-color: #004080;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
+    <style>
+      :root {
+        --color-fondo: #dfd7d3;
+        --color-rosa: #efcec3;
+        --color-cafe: #6b4c3b;
+        --color-blanco: #ffffff;
+      }
 
-    h1, h2 {
-      color: #004080;
-    }
+      * {
+        box-sizing: border-box;
+      }
 
-    section {
-      background-color: white;
-      margin: 20px auto;
-      padding: 20px;
-      border-radius: 8px;
-      max-width: 900px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
+      body {
+        font-family: "Inter", sans-serif;
+        margin: 0;
+        background-color: var(--color-fondo);
+        color: var(--color-cafe);
+      }
 
-    ul {
-      padding-left: 20px;
-    }
+      header {
+        background-color: var(--color-cafe);
+        color: var(--color-blanco);
+        padding: 40px 20px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
 
-    a {
-      color: #004080;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Melissa Mireles Rendón</h1>
-    <p>Portafolio de Evidencias – Etapa de Enfoque</p>
-  </header>
+      header h1 {
+        margin: 0;
+        font-size: 2.2rem;
+      }
 
-  <section id="sobre-mi">
-    <h2>Sobre mí</h2>
-    <p>Estudiante de 6to semestre de Ingeniería en Tecnologías Computacionales con interés en ciberseguridad, inteligencia artificial, desarrollo web y móvil. Me defino por la responsabilidad, disciplina y entusiasmo, cultivados a través del deporte de alto rendimiento.</p>
-  </section>
+      header p {
+        margin-top: 8px;
+        font-size: 1.1rem;
+      }
 
-  <section id="evidencias">
-    <h2>Proyectos destacados</h2>
-    <ul>
-      <li><strong>Jooch Skyfall:</strong> Videojuego educativo para concientizar sobre finanzas agrícolas. Implementado con sistema cliente-servidor, interfaz 2D y base de datos.<br><em>Herramientas:</em> Unity, C#, SQL.</li>
-      <li><strong>App de Compras y Gestión:</strong> Aplicación móvil Android con arquitectura MVVM y APIs REST en tiempo real.<br><em>Herramientas:</em> Kotlin, Jetpack Compose, Retrofit.</li>
-      <li><strong>Wearable IoT Biométrico:</strong> Monitoreo en tiempo real con integración de sensores biométricos y dashboard web.<br><em>Herramientas:</em> Node-RED, Arduino, HTML, PHP, MySQL.</li>
-    </ul>
-  </section>
+      nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color: var(--color-blanco);
+        padding: 10px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
 
-  <section id="reflexion">
-    <h2>Reflexión crítica</h2>
-    <p>Las evidencias más retadoras fueron aquellas que integraron diversas tecnologías en un mismo proyecto. Retos como resolver errores técnicos, comunicar ideas en equipo y adaptar soluciones en tiempo real me obligaron a crecer profesional y personalmente.</p>
-    <p>Estas evidencias se conectan entre sí porque todas reflejan la importancia del pensamiento crítico, la planeación técnica y la empatía hacia los usuarios. Me siento orgullosa de mi compromiso, resiliencia y deseo por seguir aprendiendo.</p>
-  </section>
+      nav button {
+        margin: 6px 10px;
+        padding: 10px 20px;
+        border: none;
+        background-color: var(--color-cafe);
+        color: var(--color-blanco);
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
 
-  <section id="experiencia">
-    <h2>Experiencia profesional</h2>
-    <ul>
-      <li><strong>M3G Consultores S.C.:</strong> Desarrollo y diseño de página web para venta de servicios.</li>
-      <li><strong>Corporativo Hospital Satélite:</strong> Asistente en análisis de datos y atracción de talento.</li>
-    </ul>
-  </section>
+      nav button:hover {
+        background-color: var(--color-rosa);
+        color: var(--color-cafe);
+      }
 
-  <section id="habilidades">
-    <h2>Habilidades técnicas</h2>
-    <ul>
-      <li>Lenguajes: Python, C++, Clojure, JavaScript, C#, SQL</li>
-      <li>Web: HTML, CSS, PHP</li>
-      <li>Mobile: Kotlin, Android Studio, Jetpack Compose</li>
-      <li>IoT: Arduino, Node-RED, MQTT</li>
-      <li>Soft skills: liderazgo, trabajo en equipo, comunicación efectiva</li>
-    </ul>
-  </section>
+      section {
+        display: none;
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 30px;
+        background-color: var(--color-blanco);
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.07);
+        animation: fadeIn 0.5s ease;
+      }
 
-  <section id="logros">
-    <h2>Logros y Actividades</h2>
-    <ul>
-      <li>Capitana del equipo de Flag Football Borregos CEM – MVP 2023</li>
-      <li>Seleccionada nacional de Pentatlón Moderno (2013-2021)</li>
-      <li>11° lugar en los Juegos Olímpicos de la Juventud – Buenos Aires 2018</li>
-    </ul>
-  </section>
+      section.active {
+        display: block;
+      }
 
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>📍 Estado de México, México<br>
-    ✉️ melissa.mirelesren@gmail.com<br>
-    💻 <a href="https://github.com/A01379736" target="_blank">Mi GitHub</a></p>
-  </section>
-</body>
+      h2 {
+        color: var(--color-cafe);
+        margin-top: 0;
+        font-size: 1.6rem;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      a {
+        color: var(--color-cafe);
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      a:hover {
+        color: var(--color-rosa);
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .carousel {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+
+      .carousel-images {
+        display: flex;
+        transition: transform 0.4s ease-in-out;
+        width: 300%;
+      }
+
+      .carousel-images img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .carousel-controls {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+
+      .carousel-controls button {
+        background-color: #efcec3;
+        color: #6b4c3b;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      .filter-btn {
+        background-color: transparent;
+        border: none;
+        color: #6b4c3b;
+        padding: 4px 10px;
+        margin: 4px 6px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: background-color 0.3s ease, opacity 0.3s ease;
+      }
+
+      .filter-btn:hover {
+        background-color: #efcec3;
+        opacity: 1;
+      }
+
+      .filter-btn.active {
+        background-color: #6b4c3b;
+        color: #fff;
+        opacity: 1;
+      }
+      .filtros-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 14px;
+        max-width: 900px;
+        margin: 0 auto 20px auto;
+        padding: 0 10px;
+      }
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 24px;
+        max-width: 960px;
+        margin: 30px auto 0 auto;
+        padding: 0 10px;
+      }
+
+      .skill-card {
+        background-color: var(--color-blanco);
+        border: 1px solid #e0dcd9;
+        border-radius: 12px;
+        padding: 20px;
+        width: 280px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+        transition: transform 0.3s ease;
+      }
+
+      .skill-card:hover {
+        transform: translateY(-4px);
+      }
+
+      .skill-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+        color: var(--color-cafe);
+      }
+
+      .skill-card ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .skill-card li {
+        margin-bottom: 8px;
+        font-size: 0.95rem;
+        color: #4b3b2d;
+      }
+
+      .skill-card i {
+        margin-right: 8px;
+        color: var(--color-cafe);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Melissa Mireles Rendón</h1>
+      <p>Ingeniería en Tecnologías Computacionales | Portafolio Profesional</p>
+    </header>
+
+    <nav>
+      <button onclick="showSection('sobre-mi')">Sobre mí</button>
+      <button onclick="showSection('portafolio')">Portafolio</button>
+      <button onclick="showSection('habilidades')">Habilidades</button>
+      <button onclick="showSection('logros')">Logros</button>
+      <button onclick="showSection('contacto')">Contacto</button>
+    </nav>
+
+    <section id="sobre-mi" class="active">
+      <div
+        style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px"
+      >
+        <div style="flex: 1; min-width: 250px; text-align: center">
+          <img
+            src="https://i.imgur.com/2yaf2wb.jpg"
+            alt="Foto de perfil"
+            style="
+              width: 200px;
+              height: 200px;
+              object-fit: cover;
+              border-radius: 50%;
+              border: 4px solid #efcec3;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            "
+          />
+          <h3 style="margin-top: 15px">Melissa Mireles Rendón</h3>
+          <p style="font-style: italic">
+            “Códigos, deporte y café: mi fórmula para crear.” ☕
+          </p>
+        </div>
+        <div style="flex: 2; min-width: 280px">
+          <h2 style="margin-top: 0">¡Hola! Soy Melissa 👋</h2>
+          <p>
+            Soy desarrolladora y deportista. Estudio Ingeniería en Tecnologías
+            Computacionales y me especializo en crear soluciones web, móviles y
+            conectadas al mundo real (IoT). Mi formación como atleta olímpica me
+            enseñó a ser disciplinada, enfocada y resiliente... cualidades que
+            ahora aplico en cada proyecto de tecnología que construyo.
+          </p>
+
+          <ul style="margin-top: 20px">
+            <li>💡 Me apasionan la IA, ciberseguridad y el desarrollo UX</li>
+            <li>🎮 Amante de los videojuegos... ¡también los programo!</li>
+            <li>🚀 Mis proyectos buscan mejorar la vida de las personas</li>
+            <li>🏆 MVP 2023 en Flag Football y 11º lugar olímpico</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="portafolio">
+      <h2>Portafolio profesional</h2>
+      <div class="filtros-container">
+        <button class="filter-btn active" onclick="filterProjects('all')">
+          Todos
+        </button>
+        <button class="filter-btn" onclick="filterProjects('desarrollo-web')">
+          Desarrollo Web
+        </button>
+        <button class="filter-btn" onclick="filterProjects('desarrollo-movil')">
+          Desarrollo Móvil
+        </button>
+        <button class="filter-btn" onclick="filterProjects('videojuegos')">
+          Videojuegos y Gamificación
+        </button>
+        <button class="filter-btn" onclick="filterProjects('bioinformatica')">
+          Bioinformática y Ciencia de Datos
+        </button>
+        <button class="filter-btn" onclick="filterProjects('iot')">
+          IoT y Sistemas Embebidos
+        </button>
+        <button class="filter-btn" onclick="filterProjects('seguridad')">
+          Seguridad y Testing
+        </button>
+        <button class="filter-btn" onclick="filterProjects('educacion')">
+          Educación / Tecnología Social
+        </button>
+        <button
+          class="filter-btn"
+          onclick="filterProjects('ingenieria-requisitos')"
+        >
+          Ingeniería de Requerimientos
+        </button>
+      </div>
+
+      <div
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          gap: 30px;
+          justify-content: center;
+        "
+      >
+        <!-- Proyecto 1: Juego Educativo País-Capital -->
+        <div class="project-card desarrollo-software educacion python">
+          <div class="carousel" id="carousel-pais">
+            <div class="carousel-images">
+              <img src="https://i.imgur.com/5u07aVC.png" alt="memorama1" />
+              <img src="https://i.imgur.com/MtbqTcy.png" alt="memorama2" />
+              <img src="https://i.imgur.com/qBDrdeJ.png" alt="memorama3" />
+            </div>
+            <div class="carousel-controls">
+              <button onclick="moveCarousel('carousel-pais', -1)">◀</button>
+              <button onclick="moveCarousel('carousel-pais', 1)">▶</button>
+            </div>
+          </div>
+          <h3 style="margin-top: 15px">🧠 Juego Educativo: País - Capital</h3>
+          <p>
+            Juego tipo memorama hecho en Python para fortalecer la memoria
+            visual y la atención, con niveles, vidas y lógica validada.
+          </p>
+          <p>
+            <strong>Habilidades:</strong> Programación estructurada,
+            condicionales, bucles, matrices, manejo de archivos, documentación
+            técnica.
+          </p>
+          <p><strong>Tecnologías:</strong> Python (.py, .txt), VSCode</p>
+        </div>
+
+        <!-- Proyecto 2: Análisis Genómico del SARS-CoV-2 -->
+        <div class="project-card bioinformatica r educacion">
+          <div class="carousel" id="carousel-covid">
+            <div class="carousel-images">
+              <img src="https://i.imgur.com/mKDRBrC.png" alt="covid1" />
+              <img src="https://i.imgur.com/nLUmR9l.png" alt="covid2" />
+              <img src="https://i.imgur.com/RJWrh8y.png" alt="covid3" />
+            </div>
+            <div class="carousel-controls">
+              <button onclick="moveCarousel('carousel-covid', -1)">◀</button>
+              <button onclick="moveCarousel('carousel-covid', 1)">▶</button>
+            </div>
+          </div>
+          <h3 style="margin-top: 15px">🧬 Análisis Genómico del SARS-CoV-2</h3>
+          <p>
+            Proyecto de bioinformática en R para comparar variantes del
+            coronavirus mediante secuencias genéticas y árboles filogenéticos.
+          </p>
+          <p>
+            <strong>Habilidades:</strong> R, %GC, árboles, alineamientos,
+            gráficos, investigación en PubMed, presentación audiovisual
+          </p>
+          <p><strong>Tecnologías:</strong> R, NCBI, PubMed, YouTube</p>
+        </div>
+
+        <!-- Proyecto 3: SRS – App Estudiantes de Intercambio -->
+        <div class="project-card ingenieria-requisitos documentacion educacion">
+          <div class="carousel" id="carousel-srs">
+            <div class="carousel-images">
+              <img src="https://i.imgur.com/XIMqaHh.png" alt="srs1" />
+              <img src="https://i.imgur.com/dMLHeHT.png" alt="srs2" />
+              <img src="https://i.imgur.com/YomJDqz.png" alt="srs3" />
+            </div>
+            <div class="carousel-controls">
+              <button onclick="moveCarousel('carousel-srs', -1)">◀</button>
+              <button onclick="moveCarousel('carousel-srs', 1)">▶</button>
+            </div>
+          </div>
+          <h3 style="margin-top: 15px">📱 SRS App para Estudiantes Tec21</h3>
+          <p>
+            Documento de requerimientos IEEE 29148 para una app de conexión
+            entre estudiantes de intercambio y personal institucional.
+          </p>
+          <p>
+            <strong>Habilidades:</strong> Ingeniería de requerimientos, análisis
+            funcional, documentación técnica, modelado con UML
+          </p>
+          <p>
+            <strong>Tecnologías:</strong> IEEE 29148, PDF, Lucidchart / Visual
+            Paradigm
+          </p>
+        </div>
+        <!-- Proyecto 4: Mind-Body B’s Wearable IoT -->
+        <div class="project-card iot desarrollo-web visualizacion-datos">
+          <div class="carousel" id="carousel-iot">
+            <div class="carousel-images">
+              <img src="https://i.imgur.com/GQsjmwG.png" alt="iot1" />
+              <img src="https://i.imgur.com/JX6avL8.png" alt="iot2" />
+              <img src="https://i.imgur.com/VzKXTVs.png" alt="iot3" />
+            </div>
+            <div class="carousel-controls">
+              <button onclick="moveCarousel('carousel-iot', -1)">◀</button>
+              <button onclick="moveCarousel('carousel-iot', 1)">▶</button>
+            </div>
+          </div>
+          <h3 style="margin-top: 15px">🧠 Mind-Body B’s Wearable</h3>
+          <p>
+            Banda biométrica con sensores para monitoreo remoto en tiempo real.
+            Conectividad IoT, base de datos y frontend web con gráficas.
+          </p>
+          <p>
+            <strong>Habilidades:</strong> Arduino, MQTT, Node-RED, MySQL, PHP,
+            Chart.js, desarrollo web en tiempo real
+          </p>
+          <p>
+            <strong>Tecnologías:</strong> ESP8266, sensores DHT11, MAX30102,
+            phpMyAdmin, VSCode
+          </p>
+        </div>
+
+        <!-- Proyecto 5: Todas Brillamos – Sistema Seguro de E-commerce -->
+        <div class="project-card seguridad desarrollo-web mobile pagos">
+          <div class="carousel" id="carousel-brillamos">
+            <div class="carousel-images">
+              <img src="https://i.imgur.com/XKuwSMB.png" alt="brillamos1" />
+              <img src="https://i.imgur.com/qweIq6R.png" alt="brillamos2" />
+              <img src="https://i.imgur.com/f3EAlTm.png" alt="brillamos3" />
+            </div>
+            <div class="carousel-controls">
+              <button onclick="moveCarousel('carousel-brillamos', -1)">
+                ◀
+              </button>
+              <button onclick="moveCarousel('carousel-brillamos', 1)">▶</button>
+            </div>
+          </div>
+          <h3 style="margin-top: 15px">
+            💻 Todas Brillamos – E-commerce Seguro
+          </h3>
+          <p>
+            Plataforma móvil y web para ventas con Stripe, Firebase, login
+            seguro, protección XSS y cumplimiento PCI-DSS. Contenido educativo
+            integrado.
+          </p>
+          <p>
+            <strong>Habilidades:</strong> Kotlin, Firebase, Stripe, pruebas QA,
+            seguridad web, autenticación, documentación completa
+          </p>
+          <p>
+            <strong>Tecnologías:</strong> Android Studio, Firebase, HTML, JS,
+            PCI-DSS, ClickUp
+          </p>
+        </div>
+
+        <!-- Proyecto 6: Jooch Skyfall – Videojuego Educativo -->
+        <div class="project-card videojuegos educacion gamificacion">
+          <div class="carousel" id="carousel-joochx">
+            <div class="carousel-images">
+              <img src="https://i.imgur.com/lqTXqEj.png" alt="jooch1" />
+              <img src="https://i.imgur.com/DyoZcqz.png" alt="jooch2" />
+              <img src="https://i.imgur.com/Y6ndIG6.png" alt="jooch3" />
+            </div>
+            <div class="carousel-controls">
+              <button onclick="moveCarousel('carousel-joochx', -1)">◀</button>
+              <button onclick="moveCarousel('carousel-joochx', 1)">▶</button>
+            </div>
+          </div>
+          <h3 style="margin-top: 15px">🎓 Jooch Skyfall – Versión Completa</h3>
+          <p>
+            Videojuego educativo con narrativa, sistema cliente-servidor y base
+            de datos integrada. Fortalece habilidades financieras desde el
+            juego.
+          </p>
+          <p>
+            <strong>Habilidades:</strong> Unity, C#, SQL, diseño UX,
+            documentación de desarrollo, storytelling
+          </p>
+          <p>
+            <strong>Tecnologías:</strong> Unity, VSCode, Trello, DB relacional,
+            GDD
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="habilidades">
+      <h2>Habilidades técnicas</h2>
+
+      <div class="skills-grid">
+        <!-- Lenguajes -->
+        <div class="skill-card">
+          <h3><i class="fas fa-code"></i> Lenguajes de Programación</h3>
+          <ul>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>C#</li>
+            <li>Kotlin</li>
+            <li>SQL</li>
+            <li>HTML / CSS</li>
+          </ul>
+        </div>
+
+        <!-- Desarrollo móvil -->
+        <div class="skill-card">
+          <h3><i class="fas fa-mobile-alt"></i> Desarrollo Móvil</h3>
+          <ul>
+            <li>Android Studio</li>
+            <li>Jetpack Compose</li>
+            <li>Retrofit</li>
+            <li>Kotlin</li>
+          </ul>
+        </div>
+
+        <!-- Desarrollo web -->
+        <div class="skill-card">
+          <h3><i class="fas fa-globe"></i> Desarrollo Web</h3>
+          <ul>
+            <li>React (básico)</li>
+            <li>Node.js</li>
+            <li>PHP</li>
+            <li>Chart.js</li>
+          </ul>
+        </div>
+
+        <!-- IoT y Datos -->
+        <div class="skill-card">
+          <h3><i class="fas fa-microchip"></i> IoT y Bases de Datos</h3>
+          <ul>
+            <li>Arduino IDE</li>
+            <li>Node-RED</li>
+            <li>MQTT</li>
+            <li>MySQL</li>
+            <li>phpMyAdmin</li>
+          </ul>
+        </div>
+
+        <!-- Herramientas -->
+        <div class="skill-card">
+          <h3><i class="fas fa-tools"></i> Herramientas y Gestión</h3>
+          <ul>
+            <li>Git y GitHub</li>
+            <li>Figma</li>
+            <li>Trello</li>
+            <li>Lucidchart / Visual Paradigm</li>
+            <li>Power BI</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="logros">
+      <h2>Logros y Reconocimientos</h2>
+      <ul>
+        <li>🏈 Capitana de Flag Football Borregos CEM – MVP 2023</li>
+        <li>
+          🥇 Participante olímpica en Juegos de la Juventud – Buenos Aires 2018
+        </li>
+        <li>🎖️ Medallas nacionales e internacionales en Pentatlón Moderno</li>
+      </ul>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>
+        📍 Estado de México, México<br />
+        ✉️ melissa.mirelesren@gmail.com<br />
+        💻 <a href="https://github.com/A01379736" target="_blank">GitHub</a>
+      </p>
+    </section>
+
+    <script>
+      function showSection(id) {
+        document.querySelectorAll("section").forEach((sec) => {
+          sec.classList.remove("active");
+        });
+        document.getElementById(id).classList.add("active");
+      }
+    </script>
+    <script>
+      const positions = {
+        carousel1: 0,
+        carousel2: 0,
+        carousel3: 0,
+      };
+
+      function moveCarousel(id, direction) {
+        const container = document.querySelector(`#${id} .carousel-images`);
+        const totalImages = container.children.length;
+        positions[id] = (positions[id] + direction + totalImages) % totalImages;
+        const offset = -positions[id] * 100;
+        container.style.transform = `translateX(${offset}%)`;
+      }
+    </script>
+    <script>
+      function filterProjects(category) {
+        const cards = document.querySelectorAll(".project-card");
+        const buttons = document.querySelectorAll(".filter-btn");
+
+        buttons.forEach((btn) => btn.classList.remove("active"));
+        event.target.classList.add("active");
+
+        cards.forEach((card) => {
+          if (category === "all") {
+            card.style.display = "block";
+          } else {
+            card.style.display = card.classList.contains(category)
+              ? "block"
+              : "none";
+          }
+        });
+      }
+    </script>
+  </body>
 </html>
