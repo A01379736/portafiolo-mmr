@@ -237,6 +237,15 @@
         margin-right: 8px;
         color: var(--color-cafe);
       }
+      .logro-pill {
+        background-color: #efcec3;
+        color: #6b4c3b;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        white-space: nowrap;
+      }
     </style>
   </head>
   <body>
@@ -254,45 +263,57 @@
     </nav>
 
     <section id="sobre-mi" class="active">
-      <div
-        style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px"
-      >
-        <div style="flex: 1; min-width: 250px; text-align: center">
-          <img
-            src="https://i.imgur.com/2yaf2wb.jpg"
-            alt="Foto de perfil"
-            style="
-              width: 200px;
-              height: 200px;
-              object-fit: cover;
-              border-radius: 50%;
-              border: 4px solid #efcec3;
-              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-            "
-          />
-          <h3 style="margin-top: 15px">Melissa Mireles Rendón</h3>
-          <p style="font-style: italic">
-            “Códigos, deporte y café: mi fórmula para crear.” ☕
-          </p>
-        </div>
-        <div style="flex: 2; min-width: 280px">
-          <h2 style="margin-top: 0">¡Hola! Soy Melissa 👋</h2>
-          <p>
-            Soy desarrolladora y deportista. Estudio Ingeniería en Tecnologías
-            Computacionales y me especializo en crear soluciones web, móviles y
-            conectadas al mundo real (IoT). Mi formación como atleta olímpica me
-            enseñó a ser disciplinada, enfocada y resiliente... cualidades que
-            ahora aplico en cada proyecto de tecnología que construyo.
-          </p>
+      <h2>Sobre mí</h2>
 
-          <ul style="margin-top: 20px">
-            <li>💡 Me apasionan la IA, ciberseguridad y el desarrollo UX</li>
-            <li>🎮 Amante de los videojuegos... ¡también los programo!</li>
-            <li>🚀 Mis proyectos buscan mejorar la vida de las personas</li>
-            <li>🏆 MVP 2023 en Flag Football y 11º lugar olímpico</li>
-          </ul>
-        </div>
+      <!-- Nube de etiquetas -->
+      <p style="font-style: italic; text-align: center; line-height: 1.8">
+        💻 Desarrolladora · 🎓 Estudiante ITC · 🏈 Atleta de alto rendimiento ·
+        🌍 Curiosa <br />
+        ✨ Creativa · 🤖 Apasionada por la IA · 🔐 Interesada en Ciberseguridad
+        · 🎮 Gamer estratégica
+      </p>
+
+      <!-- Cinta de logros destacados -->
+      <div
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 10px;
+          margin-top: 20px;
+        "
+      >
+        <span class="logro-pill">🏈 MVP Flag Football 2023</span>
+        <span class="logro-pill">🎓 Tec de Monterrey – ITC</span>
+        <span class="logro-pill">📡 Proyecto IoT biométrico</span>
+        <span class="logro-pill">💻 +10 proyectos técnicos</span>
+        <span class="logro-pill">🧠 Apasionada por el impacto social</span>
       </div>
+
+      <!-- Mini descripción profesional -->
+      <div style="margin-top: 30px">
+        <p>
+          Soy Melissa Mireles, una desarrolladora enfocada en crear tecnología
+          útil, escalable y humana. Mi experiencia abarca desde videojuegos
+          educativos y sistemas IoT hasta soluciones de e-commerce con enfoque
+          en seguridad. Combinando mi formación como atleta olímpica con la
+          ingeniería, afronto cada proyecto con resiliencia, estrategia y
+          pasión.
+        </p>
+      </div>
+
+      <!-- Cita inspiradora -->
+      <blockquote
+        style="
+          font-style: italic;
+          margin-top: 30px;
+          color: #6b4c3b;
+          text-align: center;
+        "
+      >
+        “La disciplina que aprendí en el deporte es la misma que aplico al
+        código.”
+      </blockquote>
     </section>
 
     <section id="portafolio">
