@@ -237,14 +237,87 @@
         margin-right: 8px;
         color: var(--color-cafe);
       }
-      .logro-pill {
-        background-color: #efcec3;
+      .about-card {
+        background-color: var(--color-blanco);
+        padding: 40px 30px;
+        border-radius: 16px;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
+        position: relative;
+        max-width: 800px;
+        margin: 40px auto;
+        border-left: 6px solid var(--color-rosa);
+        animation: fadeUp 0.8s ease-out;
+      }
+
+      .about-tags {
+        font-style: italic;
+        font-size: 0.95rem;
+        text-align: center;
         color: #6b4c3b;
-        padding: 6px 14px;
-        border-radius: 20px;
-        font-size: 0.85rem;
-        font-weight: 500;
-        white-space: nowrap;
+        margin-bottom: 20px;
+        line-height: 1.7;
+      }
+
+      .logro-badges {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 25px;
+      }
+
+      .info-grid {
+        max-width: 960px;
+        margin: 50px auto;
+        padding: 0 20px;
+      }
+
+      .info-grid h2 {
+        color: #6b4c3b;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 1.6rem;
+      }
+
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+        margin-bottom: 40px;
+      }
+
+      .card {
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+        padding: 20px 15px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid #e5dcd8;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+      }
+
+      .card .emoji {
+        font-size: 2.2rem;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .card .title {
+        font-weight: bold;
+        font-size: 1.1rem;
+        color: #4a342e;
+        margin-bottom: 6px;
+      }
+
+      .card .desc {
+        font-size: 0.92rem;
+        color: #6b4c3b;
+        opacity: 0.85;
       }
     </style>
   </head>
@@ -263,57 +336,93 @@
     </nav>
 
     <section id="sobre-mi" class="active">
-      <h2>Sobre mí</h2>
+      <div class="about-card">
+        <h2>Sobre mí</h2>
 
-      <!-- Nube de etiquetas -->
-      <p style="font-style: italic; text-align: center; line-height: 1.8">
-        💻 Desarrolladora · 🎓 Estudiante ITC · 🏈 Atleta de alto rendimiento ·
-        🌍 Curiosa <br />
-        ✨ Creativa · 🤖 Apasionada por la IA · 🔐 Interesada en Ciberseguridad
-        · 🎮 Gamer estratégica
-      </p>
+        <h2 style="text-align: center">✨ Mucho más que código</h2>
 
-      <!-- Cinta de logros destacados -->
-      <div
-        style="
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 10px;
-          margin-top: 20px;
-        "
-      >
-        <span class="logro-pill">🏈 MVP Flag Football 2023</span>
-        <span class="logro-pill">🎓 Tec de Monterrey – ITC</span>
-        <span class="logro-pill">📡 Proyecto IoT biométrico</span>
-        <span class="logro-pill">💻 +10 proyectos técnicos</span>
-        <span class="logro-pill">🧠 Apasionada por el impacto social</span>
-      </div>
-
-      <!-- Mini descripción profesional -->
-      <div style="margin-top: 30px">
-        <p>
-          Soy Melissa Mireles, una desarrolladora enfocada en crear tecnología
-          útil, escalable y humana. Mi experiencia abarca desde videojuegos
-          educativos y sistemas IoT hasta soluciones de e-commerce con enfoque
-          en seguridad. Combinando mi formación como atleta olímpica con la
-          ingeniería, afronto cada proyecto con resiliencia, estrategia y
-          pasión.
+        <p class="about-text">
+          Soy Melissa Mireles, una desarrolladora mexicana apasionada por la
+          tecnología que transforma vidas. Desde videojuegos con propósito
+          educativo hasta sistemas conectados vía IoT, cada proyecto que realizo
+          está guiado por la creatividad, la empatía y la estrategia que aprendí
+          siendo atleta olímpica.
         </p>
+
+        <!-- Cita -->
+        <blockquote class="about-quote">
+          “La disciplina que aprendí en el deporte es la misma que aplico al
+          código.”
+        </blockquote>
       </div>
 
-      <!-- Cita inspiradora -->
-      <blockquote
-        style="
-          font-style: italic;
-          margin-top: 30px;
-          color: #6b4c3b;
-          text-align: center;
-        "
-      >
-        “La disciplina que aprendí en el deporte es la misma que aplico al
-        código.”
-      </blockquote>
+      <!-- NUEVO BLOQUE VISUAL: Fun Facts y Actividades -->
+      <div class="info-grid">
+        <h2>🎉 Fun Facts</h2>
+        <div class="card-grid">
+          <div class="card">
+            <span class="emoji">🏆</span>
+            <p class="title">Atleta olímpica</p>
+            <p class="desc">Pentatlón Moderno en Buenos Aires 2018</p>
+          </div>
+          <div class="card">
+            <span class="emoji">👑</span>
+            <p class="title">Influencer</p>
+            <p class="desc">Motivando e impactando positivamente a través del deporte y las redes sociales</p>
+          </div>
+          <div class="card">
+            <span class="emoji">🎒</span>
+            <p class="title">Empacadora profesional</p>
+            <p class="desc">¡No te imaginas loq ue puedo empacar en una sola maleta!</p>
+          </div>
+          <div class="card">
+            <span class="emoji">🧁</span>
+            <p class="title">Repostera aficionada</p>
+            <p class="desc">Me relaja hornear pasteles creativos</p>
+          </div>
+        </div>
+
+        <h2>⚡ Actividades extracurriculares</h2>
+        <div class="card-grid">
+
+          <div class="card">
+            <span class="emoji">🏈</span>
+            <p class="title">Coach comunitaria</p>
+            <p class="desc">
+              Lideré el proyecto <strong>Training the Future</strong> en una
+              secundaria de bajos recursos, promoviendo el deporte como vía para
+              la salud, becas y habilidades de vida.
+            </p>
+          </div>
+
+          <div class="card">
+            <span class="emoji">🌱</span>
+            <p class="title">Activista ambiental</p>
+            <p class="desc">
+              Integrante de <strong>Amigos x el Bosque</strong>, promoviendo la
+              educación sostenible y protección del ecosistema del Bosque de
+              Agua.
+            </p>
+          </div>
+
+          <div class="card">
+            <span class="emoji">🏈</span>
+            <p class="title">Capitana Flag Football</p>
+            <p class="desc">
+              Liderando al equipo representativo de Flag Football del Tec CEM como
+              capitana y MVP 2022-2023-2024-2025.
+            </p>
+          </div>
+          <div class="card">
+            <span class="emoji">⚙️</span>
+            <p class="title">Automatizadora solidaria</p>
+            <p class="desc">
+              Desarrollo soluciones digitales para automatizar procesos en
+              fundaciones con impacto social Y PyMEs.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="portafolio">
@@ -592,17 +701,6 @@
           </ul>
         </div>
       </div>
-    </section>
-
-    <section id="logros">
-      <h2>Logros y Reconocimientos</h2>
-      <ul>
-        <li>🏈 Capitana de Flag Football Borregos CEM – MVP 2023</li>
-        <li>
-          🥇 Participante olímpica en Juegos de la Juventud – Buenos Aires 2018
-        </li>
-        <li>🎖️ Medallas nacionales e internacionales en Pentatlón Moderno</li>
-      </ul>
     </section>
 
     <section id="contacto">
